@@ -1,128 +1,18 @@
 # Car Price Prediction with Machine Learning
 
-## Oasis Infobyte Data Science Internship — Task 2
+## 📌 Project Overview
 
-### Project Overview
+This project aims to predict the selling price of used cars using Machine Learning regression algorithms. The prediction is based on various vehicle features such as manufacturing year, kilometers driven, fuel type, transmission, mileage, engine capacity, maximum power, seats, car age, and brand.
 
-This project focuses on predicting the selling price of used cars using machine learning regression techniques.
+---
 
-The project follows a complete machine learning workflow, including data cleaning, feature engineering, exploratory data analysis, data preprocessing, model training, model evaluation, model comparison, and feature importance analysis.
+## 🎯 Objective
 
-## Objective
+To build and evaluate Machine Learning regression models that can accurately predict the selling price of a used car based on its features.
 
-The objective of this project is to build machine learning regression models that predict the selling price of used cars based on their features.
+---
 
-## Dataset
-
-The dataset contains 8,128 records and 12 original features.
-
-### Features
-
-- `name` — Name of the car
-- `year` — Manufacturing year
-- `selling_price` — Selling price of the car
-- `km_driven` — Kilometers driven
-- `fuel` — Fuel type
-- `seller_type` — Type of seller
-- `transmission` — Transmission type
-- `owner` — Ownership information
-- `mileage(km/ltr/kg)` — Mileage
-- `engine` — Engine capacity
-- `max_power` — Maximum engine power
-- `seats` — Number of seats
-
-## Data Cleaning
-
-The following preprocessing steps were performed:
-
-- Checked for missing values
-- Converted numerical columns into appropriate numeric formats
-- Handled missing numerical values using median imputation
-- Identified and removed duplicate records
-- Checked categorical features
-- Prepared the dataset for machine learning
-
-After removing duplicate records, the dataset contained 6,926 records.
-
-## Feature Engineering
-
-### Car Age
-
-Car age was calculated from the manufacturing year.
-
-`Car Age = 2026 - Manufacturing Year`
-
-### Brand Extraction
-
-The car brand was extracted from the car name.
-
-Example:
-
-`Maruti Swift Dzire → Maruti`
-
-## Exploratory Data Analysis
-
-The following visualizations were performed:
-
-- Distribution of selling prices
-- Selling price vs. fuel type
-- Selling price vs. car age
-- Feature correlation heatmap
-
-These visualizations were used to understand the dataset and identify relationships between different features and selling price.
-
-## Data Preprocessing
-
-Categorical features were converted into numerical representations using One-Hot Encoding.
-
-Categorical features include:
-
-- Fuel
-- Seller Type
-- Transmission
-- Owner
-- Brand
-
-The dataset was divided into:
-
-- 80% Training Data
-- 20% Testing Data
-
-A `random_state` of 42 was used for reproducibility.
-
-## Machine Learning Models
-
-Two regression models were trained:
-
-### 1. Linear Regression
-
-Linear Regression was used as a baseline regression model.
-
-### 2. Random Forest Regressor
-
-Random Forest Regressor was used to capture complex relationships between car features and selling price.
-
-## Model Evaluation
-
-The models were evaluated using:
-
-- **MAE (Mean Absolute Error)** — Lower is better
-- **RMSE (Root Mean Squared Error)** — Lower is better
-- **R² Score** — Higher is better
-
-## Model Comparison
-
-The performance of Linear Regression and Random Forest Regressor was compared using MAE, RMSE, and R² Score.
-
-Based on the evaluation results, the **Random Forest Regressor** was selected as the best-performing model.
-
-## Feature Importance
-
-Feature importance analysis was performed using the Random Forest Regressor.
-
-A Top 10 Feature Importance chart was created to identify the most influential features for predicting car selling prices.
-
-## Technologies Used
+## 🛠️ Technologies Used
 
 - Python
 - Pandas
@@ -132,35 +22,77 @@ A Top 10 Feature Importance chart was created to identify the most influential f
 - Scikit-learn
 - Jupyter Notebook
 
-## Project Workflow
+---
 
-```text
-Dataset
-   ↓
-Data Cleaning
-   ↓
-Missing Value Handling
-   ↓
-Duplicate Removal
-   ↓
-Feature Engineering
-   ↓
-Exploratory Data Analysis
-   ↓
-Correlation Analysis
-   ↓
-Categorical Encoding
-   ↓
-Train-Test Split
-   ↓
-Linear Regression
-   ↓
-Random Forest Regressor
-   ↓
-Model Evaluation
-   ↓
-Model Comparison
-   ↓
-Feature Importance
-   ↓
-Final Model Selection
+## 📂 Dataset
+
+The dataset contains information about used cars, including their name, manufacturing year, selling price, kilometers driven, fuel type, seller type, transmission, ownership, mileage, engine, maximum power, and number of seats.
+
+The original dataset contains **8,128 records and 12 features**.
+
+After handling missing values and removing **1,202 duplicate records**, the final dataset contains **6,926 records**.
+
+---
+
+## 📊 Project Workflow
+
+- Loaded the used car dataset
+- Performed data cleaning and preprocessing
+- Checked missing values and handled numerical missing values using median imputation
+- Identified and removed duplicate records
+- Performed Exploratory Data Analysis (EDA)
+- Analyzed selling price distribution
+- Created Selling Price vs. Fuel Type boxplot
+- Created Selling Price vs. Car Age scatter plot
+- Created a feature correlation heatmap
+- Performed feature engineering:
+  - Calculated Car Age from the manufacturing year
+  - Extracted Brand from the car name
+- Encoded categorical features using One-Hot Encoding
+- Split the dataset into Training (80%) and Testing (20%)
+- Trained two Machine Learning regression models:
+  - Linear Regression
+  - Random Forest Regressor
+- Evaluated the models using:
+  - Mean Absolute Error (MAE)
+  - Root Mean Squared Error (RMSE)
+  - R² Score
+- Compared the performance of both models
+- Performed feature importance analysis using the best-performing model
+
+---
+
+## 📈 Results
+
+| **Model** | **MAE** | **RMSE** | **R² Score** |
+|-----------|---------|----------|--------------|
+| Linear Regression | **See Notebook Output** | **See Notebook Output** | **See Notebook Output** |
+| Random Forest Regressor | **See Notebook Output** | **See Notebook Output** | **See Notebook Output** |
+
+---
+
+## 🏆 Best Performing Model
+
+Based on the evaluation results, **Random Forest Regressor** was selected as the best-performing model.
+
+It achieved better overall performance compared with Linear Regression based on the MAE, RMSE, and R² Score evaluation metrics.
+
+Random Forest was selected because it can capture complex relationships between different vehicle features and selling price while providing feature importance information.
+
+---
+
+## 📌 Conclusion
+
+The Car Price Prediction project successfully developed Machine Learning regression models to predict the selling prices of used cars.
+
+Both Linear Regression and Random Forest Regressor were trained and evaluated. Based on the evaluation results, **Random Forest Regressor** was selected as the final model.
+
+Feature importance analysis was also performed to identify the most influential features contributing to car price prediction.
+
+This project demonstrates practical knowledge of data preprocessing, feature engineering, exploratory data analysis, regression modelling, model evaluation, and feature importance analysis.
+
+---
+
+## 👩‍💻 Author
+
+**Dusa Rekha**
